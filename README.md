@@ -1,4 +1,4 @@
-# _DVC Tutors Logger:_
+# _DVC Tutors Dashboard:_
 <!-- [DEMO](https://trex-rbp.herokuapp.com/) -->
 <!-- ### Deployed on Heroku [here](https://itiner-ez.herokuapp.com/). -->
 <!-- <img src="http://imgur.com/dTXjfrU.png" /> -->
