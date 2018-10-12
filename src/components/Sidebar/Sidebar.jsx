@@ -54,7 +54,7 @@ class Sidebar extends Component {
             href="https://github.com/tobiahrex/react16-boilerplate"
             className="simple-text logo-normal"
           >
-            React Template
+            DVC Tutors
           </a>
         </div>
         <div className="sidebar-wrapper">
