@@ -1,11 +1,11 @@
 /* eslint-disable react/prefer-stateless-function, react/forbid-prop-types */
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { ConnectedRouter } from 'react-router-redux';
-import { Provider } from 'react-redux';
-import { Switch, Route } from 'react-router-dom';
-import indexRoutes from '../routes';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { ConnectedRouter } from "react-router-redux";
+import { Provider } from "react-redux";
+import { Switch, Route } from "react-router-dom";
+import indexRoutes from "../routes";
 
 export default class Root extends Component {
   render() {
@@ -14,9 +14,23 @@ export default class Root extends Component {
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <Switch>
-            {indexRoutes.map((prop, key) => (
-              <Route path={prop.path} component={prop.component} key={key} />
-            ))}
+            {indexRoutes.map((prop, key) => {
+              if (prop.to === '/') {
+                return (
+                  <Route
+                    exact
+                    path={prop.path}
+                    component={prop.component}
+                    key={key}
+                  />
+                );
+              } if (prop.path === '404') {
+                return <Route component={prop.component} />;
+              }
+              return (
+                <Route path={prop.path} component={prop.component} key={key} />
+              );
+            })}
           </Switch>
         </ConnectedRouter>
       </Provider>

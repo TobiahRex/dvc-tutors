@@ -5,7 +5,7 @@ import React from 'react';
 import { hot } from 'react-hot-loader';
 
 import HomePage from '../components/homepage';
-import Things from '../components/containers/Things';
+import Things from '../components/Things';
 import NotFoundPage from '../components/notFoundPage';
 
 // This is a class-based component because the current

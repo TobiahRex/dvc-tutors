@@ -1,6 +1,8 @@
 extends:
-  eslint-config-airbnb
+  - eslint-config-airbnb
+  # - prettier
 plugins:
+  # - prettier
   - react
   - babel
 parser:
@@ -19,7 +21,11 @@ env:
   mocha: true
 
 rules:
-  operator-linebreak: 0
+  quotes: 0
+  prettier/prettier:
+    - error:
+      singleQuote: 0
+  operator-linebreak: 1
   new-cap: 0
   prefer-const: 1
   one-var: 0
